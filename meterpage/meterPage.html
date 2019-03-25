@@ -1,0 +1,156 @@
+<html>
+<head>
+    <title>仪表盘</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/meterPage.css">
+<body>
+    <nav class="navbar navbar-default navbar-inverse " role="navigation" style="margin-bottom: 10px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">智能拖拉机</a>
+            </div>
+            <div class="collapse navbar-collapse " id="example-navbar-collapse">
+                <ul class="nav navbar-nav ">
+                    <li><a href="index.html">地图</a></li>
+                    <li><a href="meterPage.html">仪表</a></li>
+                    <li><a href="warningPage.html">告警</a></li>
+                    <li><a href="vedio_page.html">视频监控</a></li>
+                    <li><a href="edit_work_path_page.html">路径规划</a></li>
+                    <li><a href="control_page.html">远程遥控</a></li>
+                    <li><a href="msg_show_page.html">消息列表</a></li>
+                    <li><a href="edit_msg_page.html">发布信息</a></li>
+                    <li><a href="statisticalPage.html">统计界面</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            更多 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="meter-header row" style="border: 1px solid #dfdfdf;border-radius: 5px 5px 0 0">
+            <div class="col-xs-5 col-sm-3">
+                <form class="form-horizontal" role="form" >
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-5 col-md-3" for="name" style="padding: 8px 0 0 5px; text-align: center">设备</label>
+                        <div class="col-xs-8 col-sm-7 col-md-9" style="padding: 0 0 0 6px;">
+                            <select class="form-control" >
+                                <option selected>凯沃</option>
+                                <option>时风</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-6 col-xs-offset-1 col-sm-3 col-sm-offset-6">
+                <form class="bs-example bs-example-form" role="form">
+                    <div class="col--6" style="padding-right: 5px">
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">搜索</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="meter-msg row" style="padding-top: 5px; background-color: #fafafa;">
+            <div class="col-xs-12 col-md-6">
+                <div class="row">
+                    <div class="col-xs-6" style="padding: 0 5px">
+                        <ul class="list-group list-unstyled" style="margin: 0">
+                            <li style="padding-left: 20px">
+                                <img id="image_tractor" src="images/tractor.png" style="width: 80px ;height: 80px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6" style="padding: 0 5px">
+                        <ul class="list-group" style="margin: 0; list-style-type: square">
+                            <li>产品：<b>拖拉机</b></li>
+                            <li>机型：<b>凯沃</b></li>
+                            <li>编号：<b>09</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="row">
+                    <div class="col-xs-6" style="padding: 0 5px">
+                        <ul class="list-group" style="margin: 0; list-style-type: square">
+                            <li>用户：<b>凯沃</b></li>
+                            <li>电话：<b>18324783729</b></li>
+                            <li>出厂：<b>2017-12-03</b></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6" style="padding: 0 5px">
+                        <ul class="list-group" style="margin: 0; list-style-type: square">
+                            <li>发动机：<b>Q32435G</b></li>
+                            <li>工作时间(h)：<b>0.00</b></li>
+                            <li>行驶里程(km)：<b>0.00</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="meter-content row" style="border: 1px solid #dfdfdf;">
+            <div class="col-xs-12 col-sm-4 col-sm-push-4" style="padding: 0;">
+                <div class="meter-sm-height meter-height" id="speed"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-sm-pull-4" style="padding: 0;">
+                <div class="meter-sm-height meter-xs-height" id="r-speed"></div>
+            </div>
+            <div class="col-xs-6 col-sm-4" style="padding: 0;">
+                <div class="meter-sm-height meter-xs-height" id="fuel"></div>
+            </div>
+        </div>
+
+        <div class="meter-warning row" style="background-color: #fafafa; padding: 10px 40px;">
+            <div class="col-xs-12 col-sm-6">
+                <div class="row text-center">
+                    <div class="col-xs-3" style="padding: 0"><img src="images/fuel.png"></div>
+                    <div class="col-xs-3" style="padding: 0"><img src="images/engine.png"></div>
+                    <div class="col-xs-3" style="padding: 0"><img src="images/highBeamOff.png"></div>
+                    <div class="col-xs-3" style="padding: 0"><img src="images/battery.png"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="row text-center">
+                    <div class="col-xs-3" style="padding: 0"><img src="images/oilOff.png"></div>
+                    <div class="col-xs-3" style="padding: 0"><img src="images/stop.png"></div>
+                    <div class="col-xs-3" style="padding: 0"><img src="images/warning.png"></div>
+                    <div class="col-xs-3" style="padding: 0"><img src="images/waterTemp.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/meterPage.js"></script>
+
+    </body>
+</html>

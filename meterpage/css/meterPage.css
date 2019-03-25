@@ -1,0 +1,42 @@
+form {
+	margin: 10px 0;
+}
+
+.meter-header .form-group {
+	margin: 0;
+}
+.meter-msg ul {
+	padding-left: 30px;
+}
+.meter-msg li {
+	border: none;
+	padding: 5px;
+}
+.meter-msg b {
+	font-weight: 500;
+	color: #888;
+}
+.meter-content col-sm-4 div {
+	height: 200px;
+}
+.meter-content col-xs-6 div {
+	height: 200px;
+}
+
+.meter-height {
+	height: 380px;
+}
+.meter-xs-height {
+	height: 220px;
+	margin-top: -30px;
+}
+@media (min-width: 768px) {
+	.meter-sm-height {
+		height: 380px;
+		margin-top: 0;
+	}
+}
+
+.meter-warning img {
+	width: 60px;
+}
