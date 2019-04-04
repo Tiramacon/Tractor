@@ -61,23 +61,9 @@
     <!--页面框架-->
     <iframe id="iframePage" src="meterPage.html" frameborder="0" style="width: 100%;"></iframe>
 
-    <script>
-        //  iframe自适应高度
-        function setIframeHeight(iframe) {
-            if (iframe) {
-                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-                if (iframeWin.document.body) {
-                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-                }
-            }
-        }
-        window.onload = function () {
-            setIframeHeight(document.getElementById("iframePage"));
-        };
-    </script>
-
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>
