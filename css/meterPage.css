@@ -34,12 +34,6 @@ form {
 	background-color: #1b1b1b;
 	border: 1px solid #dfdfdf;
 }
-.meter-content col-sm-4 div {
-	height: 200px;
-}
-.meter-content col-xs-6 div {
-	height: 200px;
-}
 /*警示栏样式*/
 .meter-warning {
 	background-color: #f6f6f6;
