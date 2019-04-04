@@ -157,7 +157,7 @@
                     shadowBlur: 5
                 },
                 title : {
-                    offsetCenter: [0, '-30%'],       // x, y，单位px
+                    offsetCenter: ['10%', '-25%'],       // x, y，单位px
                     textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                         fontStyle: 'italic',
                         color: '#fff',
