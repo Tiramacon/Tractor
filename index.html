@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>智能拖拉机</title>
+</head>
+<body>
+    <!--导航栏-->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">智能拖拉机</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="page" href="javascript:void(0)" >地图</a></li>
+                    <li><a class="page" href="javascript:void(0)" >仪表</a></li>
+                    <li><a class="page" href="javascript:void(0)" >告警</a></li>
+                    <li><a class="page" href="javascript:void(0)" >路径规划</a></li>
+                    <li><a class="page" href="javascript:void(0)" >消息列表</a></li>
+                    <li><a class="page" href="javascript:void(0)" >发布信息</a></li>
+                    <li><a class="page" href="javascript:void(0)" >统计界面</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            基础设置 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="childPage" href="javascript:void(0)" >设备管理</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >产品目录</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >机型管理</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >预警管理</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >服务商管理</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >生产商信息</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >用户管理</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >部门管理</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >角色管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            更多 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="childPage" href="javascript:void(0)" >jmeter</a></li>
+                            <li><a class="childPage" href="javascript:void(0)" >EJB</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--页面框架-->
+    <iframe id="iframePage" src="meterPage.html" frameborder="0" style="width: 100%;"></iframe>
+
+    <script>
+        //  iframe自适应高度
+        function setIframeHeight(iframe) {
+            if (iframe) {
+                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                }
+            }
+        }
+        window.onload = function () {
+            setIframeHeight(document.getElementById("iframePage"));
+        };
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

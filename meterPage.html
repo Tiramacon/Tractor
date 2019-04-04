@@ -2,53 +2,19 @@
 <head>
     <title>仪表盘</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/meterPage.css">
+</head>
 <body>
-    <nav class="navbar navbar-default navbar-inverse " role="navigation" style="margin-bottom: 10px">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target="#example-navbar-collapse">
-                    <span class="sr-only">切换导航</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">智能拖拉机</a>
-            </div>
-            <div class="collapse navbar-collapse " id="example-navbar-collapse">
-                <ul class="nav navbar-nav ">
-                    <li><a href="index.html">地图</a></li>
-                    <li><a href="meterPage.html">仪表</a></li>
-                    <li><a href="warningPage.html">告警</a></li>
-                    <li><a href="vedio_page.html">视频监控</a></li>
-                    <li><a href="edit_work_path_page.html">路径规划</a></li>
-                    <li><a href="control_page.html">远程遥控</a></li>
-                    <li><a href="msg_show_page.html">消息列表</a></li>
-                    <li><a href="edit_msg_page.html">发布信息</a></li>
-                    <li><a href="statisticalPage.html">统计界面</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            更多 <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">jmeter</a></li>
-                            <li><a href="#">EJB</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <div class="container">
-        <div class="meter-header row" style="border: 1px solid #dfdfdf;border-radius: 5px 5px 0 0">
+        <!--设备搜索栏-->
+        <div class="meter-header row">
             <div class="col-xs-5 col-sm-3">
                 <form class="form-horizontal" role="form" >
                     <div class="form-group">
                         <label class="col-xs-4 col-sm-5 col-md-3" for="name" style="padding: 8px 0 0 5px; text-align: center">设备</label>
-                        <div class="col-xs-8 col-sm-7 col-md-9" style="padding: 0 0 0 6px;">
+                        <div class="col-xs-8 col-sm-7 col-md-9" style="padding: 0 0 0 6px;" id="name">
                             <select class="form-control" >
                                 <option selected>凯沃</option>
                                 <option>时风</option>
@@ -70,14 +36,14 @@
                 </form>
             </div>
         </div>
-
-        <div class="meter-msg row" style="padding-top: 5px; background-color: #fafafa;">
+        <!--设备信息栏-->
+        <div class="meter-msg row">
             <div class="col-xs-12 col-md-6">
                 <div class="row">
                     <div class="col-xs-6" style="padding: 0 5px">
                         <ul class="list-group list-unstyled" style="margin: 0">
                             <li style="padding-left: 20px">
-                                <img id="image_tractor" src="images/tractor.png" style="width: 80px ;height: 80px;">
+                                <img id="image_tractor" src="images/tractor.png">
                             </li>
                         </ul>
                     </div>
@@ -109,8 +75,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="meter-content row" style="border: 1px solid #dfdfdf;">
+        <!--仪表栏-->
+        <div class="meter-content row">
             <div class="col-xs-12 col-sm-4 col-sm-push-4" style="padding: 0;">
                 <div class="meter-sm-height meter-height" id="speed"></div>
             </div>
@@ -121,8 +87,8 @@
                 <div class="meter-sm-height meter-xs-height" id="fuel"></div>
             </div>
         </div>
-
-        <div class="meter-warning row" style="background-color: #fafafa; padding: 10px 40px;">
+        <!--警示栏-->
+        <div class="meter-warning row">
             <div class="col-xs-12 col-sm-6">
                 <div class="row text-center">
                     <div class="col-xs-3" style="padding: 0"><img src="images/fuel.png"></div>
@@ -152,5 +118,5 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/meterPage.js"></script>
 
-    </body>
+</body>
 </html>
