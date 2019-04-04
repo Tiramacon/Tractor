@@ -16,36 +16,49 @@
                 radius: '95%',
                 axisLine: {            // 坐标轴线
                     lineStyle: {       // 属性lineStyle控制线条样式
-                        width: 10
+                        color: [[0.09, '#00ff00'],[0.82, '#1eccff'],[1, '#ff4500']],
+                        width: 3,
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                axisLabel: {            // 坐标轴小标记
+                    textStyle: {       // 属性lineStyle控制线条样式
+                        fontWeight: 'bolder',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 axisTick: {            // 坐标轴小标记
-                    length: 15,        // 属性length控制线长
+                    length :15,        // 属性length控制线长
                     lineStyle: {       // 属性lineStyle控制线条样式
-                        color: 'auto'
+                        color: 'auto',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 splitLine: {           // 分隔线
-                    length: 20,         // 属性length控制线长
+                    length :25,         // 属性length控制线长
                     lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                        color: 'auto'
+                        width:3,
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
-                axisLabel: {
-                    backgroundColor: 'auto',
-                    borderRadius: 2,
-                    color: '#eee',
-                    padding: 3,
-                    textShadowBlur: 2,
-                    textShadowOffsetX: 1,
-                    textShadowOffsetY: 1,
-                    textShadowColor: '#222'
+                pointer: {           // 分隔线
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5
                 },
                 title : {
                     // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                     fontWeight: 'bolder',
-                    fontSize: 20,
-                    fontStyle: 'italic'
+                    fontSize: 18,
+                    fontStyle: 'italic',
+                    color: '#fff',
+                    shadowColor: '#fff',
+                    shadowBlur: 10
                 },
                 detail : {
                     // 其余属性默认使用全局文本样式，详见TEXTSTYLE
@@ -56,17 +69,17 @@
                             + '.' + (value[1] + '00').slice(0, 2);
                     },
                     fontWeight: 'bolder',
-                    borderRadius: 6,
-                    backgroundColor: '#444',
-                    borderColor: '#aaa',
+                    borderRadius: 5,
+                    backgroundColor: '#333',
+                    borderColor: '#fff',
                     shadowBlur: 5,
-                    shadowColor: '#333',
+                    shadowColor: '#fff',
                     shadowOffsetX: 0,
-                    shadowOffsetY: 3,
+                    shadowOffsetY: 0,
                     borderWidth: 2,
                     textBorderColor: '#000',
-                    textBorderWidth: 2,
-                    textShadowBlur: 2,
+                    textBorderWidth: 1,
+                    textShadowBlur: 1,
                     textShadowColor: '#fff',
                     textShadowOffsetX: 0,
                     textShadowOffsetY: 0,
@@ -107,30 +120,56 @@
                 splitNumber:7,
                 axisLine: {            // 坐标轴线
                     lineStyle: {       // 属性lineStyle控制线条样式
-                        width: 8
+                        color: [[0.29, '#00ff00'],[0.86, '#1eccff'],[1, '#ff4500']],
+                        width: 2,
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                axisLabel: {            // 坐标轴小标记
+                    textStyle: {       // 属性lineStyle控制线条样式
+                        fontWeight: 'bolder',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 axisTick: {            // 坐标轴小标记
-                    length:12,        // 属性length控制线长
+                    length :12,        // 属性length控制线长
                     lineStyle: {       // 属性lineStyle控制线条样式
-                        color: 'auto'
+                        color: 'auto',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 splitLine: {           // 分隔线
-                    length:20,         // 属性length控制线长
+                    length :20,         // 属性length控制线长
                     lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                        color: 'auto'
+                        width:3,
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 pointer: {
-                    width:5
+                    width:5,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5
                 },
-                title: {
-                    offsetCenter: [0, '-30%']       // x, y，单位px
+                title : {
+                    offsetCenter: [0, '-30%'],       // x, y，单位px
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontStyle: 'italic',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
                 },
                 detail: {
                     // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    fontWeight: 'bolder'
+                    fontWeight: 600,
+                    fontSize: 20,
+                    color: '#fff'
                 },
                 data:[{value: 1.5, name: 'x1000 r/min'}]
             }
@@ -165,17 +204,27 @@
                 splitNumber: 2,
                 axisLine: {            // 坐标轴线
                     lineStyle: {       // 属性lineStyle控制线条样式
-                        width: 8
+                        color: [[0.2, '#00ff00'],[0.8, '#1eccff'],[1, '#ff4500']],
+                        width: 2,
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 axisTick: {            // 坐标轴小标记
-                    splitNumber: 5,
-                    length: 10,        // 属性length控制线长
-                    lineStyle: {        // 属性lineStyle控制线条样式
-                        color: 'auto'
+                    length :12,        // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: 'auto',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 axisLabel: {
+                    textStyle: {       // 属性lineStyle控制线条样式
+                        fontWeight: 'bolder',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    },
                     formatter:function(v){
                         switch (v + '') {
                             case '0' : return 'E';
@@ -185,13 +234,18 @@
                     }
                 },
                 splitLine: {           // 分隔线
-                    length: 15,         // 属性length控制线长
+                    length :15,         // 属性length控制线长
                     lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                        color: 'auto'
+                        width:3,
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 pointer: {
-                    width:2
+                    width:2,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5
                 },
                 title : {
                     show: false
@@ -213,13 +267,22 @@
                 splitNumber: 2,
                 axisLine: {            // 坐标轴线
                     lineStyle: {       // 属性lineStyle控制线条样式
-                        width: 8
+                        color: [[0.2, '#00ff00'],[0.8, '#1eccff'],[1, '#ff4500']],
+                        width: 2,
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 axisTick: {            // 坐标轴小标记
                     show: false
                 },
                 axisLabel: {
+                    textStyle: {       // 属性lineStyle控制线条样式
+                        fontWeight: 'bolder',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    },
                     formatter:function(v){
                         switch (v + '') {
                             case '0' : return 'H';
@@ -229,13 +292,18 @@
                     }
                 },
                 splitLine: {           // 分隔线
-                    length: 15,         // 属性length控制线长
+                    length :15,         // 属性length控制线长
                     lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                        color: 'auto'
+                        width:3,
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
                     }
                 },
                 pointer: {
-                    width:2
+                    width:2,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5
                 },
                 title: {
                     show: false

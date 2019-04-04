@@ -12,7 +12,7 @@ form {
 /*设备信息栏样式*/
 .meter-msg {
 	padding-top: 5px;
-	background-color: #fafafa;
+	background-color: #f6f6f6;
 }
 .meter-msg ul {
 	padding-left: 30px;
@@ -31,6 +31,7 @@ form {
 }
 /*仪表栏样式*/
 .meter-content {
+	background-color: #1b1b1b;
 	border: 1px solid #dfdfdf;
 }
 .meter-content col-sm-4 div {
@@ -41,7 +42,7 @@ form {
 }
 /*警示栏样式*/
 .meter-warning {
-	background-color: #fafafa;
+	background-color: #f6f6f6;
 	padding: 10px 40px;
 }
 .meter-warning img {
